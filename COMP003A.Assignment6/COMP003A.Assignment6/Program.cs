@@ -6,20 +6,23 @@
 
             public string Name;
             public int Age;
-            public bool Weight;
+            public bool Workout;
 
-            public WorkoutSession(string name, int age, bool weight)
+            public WorkoutSession(string name, int age, bool workout)
             {
                 Name = name;
                 Age = age;
-                Weight = weight;
+                Workout = workout;
             }
-        
 
+        public void DisplayInfo()
+        {
+            Console.WriteLine($""
+        } 
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("1. Display All\n2. Finished a Workout\n3. Exit Program");
         }
     }
 }
