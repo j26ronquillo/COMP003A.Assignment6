@@ -42,7 +42,7 @@
                 Console.Write("\nEnter Choice: ");
 				choice = int.Parse(Console.ReadLine());
 
-				switch (choice)
+                switch (choice)
                 {
                     case 1:
                         Console.WriteLine("\nSession 1:");
@@ -56,31 +56,37 @@
                         break;
 
                     case 2:
-                        Console.WriteLine("Select session to update (1-3): ");
+                        Console.Write("\nSelect session to update (1-3): ");
                         int secondChoice = int.Parse(Console.ReadLine());
 
-                        switch (secondChoice) 
+                        switch (secondChoice)
                         {
                             case 1:
                                 SessionOne.FinishWorkout();
-                                Console.WriteLine("Session 1 updated.");
+                                Console.WriteLine("\nSession 1 updated.");
                                 break;
-							case 2:
-								SessionTwo.FinishWorkout();
-								Console.WriteLine("Session 2 updated.");
-								break;
-							case 3:
-								SessionThree.FinishWorkout();
-								Console.WriteLine("Session 3 updated.");
-								break;
+                            case 2:
+                                SessionTwo.FinishWorkout();
+                                Console.WriteLine("\nSession 2 updated.");
+                                break;
+                            case 3:
+                                SessionThree.FinishWorkout();
+                                Console.WriteLine("\nSession 3 updated.");
+                                break;
                             default:
-                                Console.WriteLine("ERROR: Invalid Option");
+                                Console.WriteLine("\nERROR: Invalid Option");
                                 break;
-						}
+                        }
                         break;
 
                     case 3:
-                        Console.WriteLine(""
+                        Console.WriteLine("Program ended. Thank you!");
+                        break;
+
+                    default:
+                        Console.WriteLine("ERROR: Invalid Option");
+                        break;
+                }
             }
         }
     }
