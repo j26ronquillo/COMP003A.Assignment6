@@ -7,30 +7,30 @@
             public string Name;
             public int Duration;
             public bool Workout;
-
-            public WorkoutSession(string name, int duration, bool workout)
-            {
-                Name = name;
-                Duration = duration;
-                Workout = workout;
-            }
-
-        public void DisplayInfo()
+		// This class models a fitness workout session that the user schedules.
+		public WorkoutSession(string name, int duration, bool workout)
         {
+            Name = name; // Name of the workout
+			Duration = duration; // Duration of the workout in minutes
+			Workout = workout; // Indicates whether the workout is completed
+		}
+
+        public void DisplayInfo() // Constructor initializes all fields when a new workout session is created.
+		{
             Console.Write($"Name: " + Name);
 			Console.Write($"Workout: " + Duration + " minutes. ");
 			Console.Write($"Completed: " + Workout + "\n");
 		} 
 
-        public void FinishWorkout()
-        {
+        public void FinishWorkout() // Marks the workout as completed.
+		{
             Workout = true;
         }
 
         static void Main(string[] args)
         {
-
-            WorkoutSession SessionOne = new WorkoutSession("Cardio. ", 30, false);
+			// This program allows the user to manage multiple workout sessions using a menu system.
+			WorkoutSession SessionOne = new WorkoutSession("Cardio. ", 30, false);
             WorkoutSession SessionTwo = new WorkoutSession("Sit-ups till failure. ", 30, false);
             WorkoutSession SessionThree = new WorkoutSession("Push-ups till failure. ", 30, false);
 
